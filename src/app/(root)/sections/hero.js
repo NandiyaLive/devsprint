@@ -35,9 +35,9 @@ const Hero = () => {
               variant="primary"
               size="xl"
               className="relative z-50"
-              onClick={() => scrollToSection("sessions")}
+              onClick={() => scrollToSection("tracks")}
             >
-              Explore Sessions
+              Explore Tracks
             </Button>
           </div>
         </div>
