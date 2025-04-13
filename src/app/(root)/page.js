@@ -1,12 +1,15 @@
-import Image from "next/image";
 import Hero from "./sections/hero";
-import Register from "./sections/register";
+import Schedule from "./sections/schedule";
+import Speakers from "./sections/speakers";
+import Tracks from "./sections/tracks";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Register />
+      <Speakers />
+      <Tracks />
+      <Schedule />
     </main>
   );
 }

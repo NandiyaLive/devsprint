@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className)}>{children}</body>
+      <body className={cn(inter.className, "dark")}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

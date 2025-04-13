@@ -1,14 +1,18 @@
 "use client";
 
-import Image from "next/image";
-import heroBg from "@public/hero-bg.jpg";
+import Countdown from "@/components/countdown";
+import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { scrollToSection } from "@/lib/utils";
+import heroBg from "@public/hero-bg.jpg";
+import Image from "next/image";
 
 const Hero = () => {
+  const targetDate = new Date("2025-04-26T08:00:00+05:30");
+
   return (
-    <section className="h-svh w-screen relative text-white">
-      <div className="h-full w-full relative">
+    <section className="relative h-svh w-screen">
+      <div className="relative h-full w-full">
         <Image
           src={heroBg}
           className="object-cover"
@@ -18,35 +22,31 @@ const Hero = () => {
         <div className="absolute h-full w-full bg-black opacity-80" />
       </div>
 
-      <div className="absolute top-0 left-0 h-full w-full z-50">
-        <div className="container flex flex-col items-center justify-center h-full">
-          <h3 className="text-xl font-semibold">
-            April 27 at University of Vavuniya
-          </h3>
-          <h1 className="text-5xl font-bold text-center mt-8 uppercase leading-tight">
-            Let&apos;s embark on an advanced tech journey!
-          </h1>
+      <div className="absolute top-0 left-0 z-50 mt-16 h-full w-full">
+        <div className="container flex h-full flex-col items-center justify-center gap-20">
+          <Logo />
 
-          <div className="grid grid-cols-2 max-w-xl mt-8 gap-8 text-center">
-            <div>
-              <h2 className="text-6xl mb-1">3</h2>
-              <p className="text-xs">Trending Tracks</p>
-            </div>
-            <div>
-              <h2 className="text-6xl mb-1">4</h2>
-              <p className="text-xs">Github Campus Experts</p>
-            </div>
+          <div className="flex flex-col items-center gap-8">
+            <h1 className="sm:text-7xxl text-center text-5xl leading-tight font-bold uppercase">
+              Let&apos;s embark on an advanced tech journey!
+            </h1>
+
+            <Button
+              variant="primary"
+              size="xl"
+              className="relative z-50"
+              onClick={() => scrollToSection("sessions")}
+            >
+              Explore Sessions
+            </Button>
           </div>
-
-          <Button
-            variant="lg"
-            className="mt-16 bg-gradient-to-br from-lime-500 to-green-600 text-black rounded-full px-8 py-6 relative z-50 uppercase font-medium"
-            asChild
-          >
-            <Link href="#register">Register Now</Link>
-          </Button>
         </div>
       </div>
+
+      <Countdown
+        className="absolute -bottom-28 left-1/2 -translate-x-1/2"
+        targetDate={targetDate}
+      />
     </section>
   );
 };
