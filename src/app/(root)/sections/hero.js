@@ -2,6 +2,7 @@
 
 import Countdown from "@/components/countdown";
 import { Logo } from "@/components/logo";
+import { LogoOld } from "@/components/logo-old";
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/lib/utils";
 import heroBg from "@public/hero-bg.jpg";
@@ -24,11 +25,11 @@ const Hero = () => {
 
       <div className="absolute top-0 left-0 z-50 mt-16 h-full w-full">
         <div className="container flex h-full flex-col items-center justify-center gap-20">
-          <Logo />
+          <LogoOld />
 
           <div className="flex flex-col items-center gap-8">
             <h1 className="sm:text-7xxl text-center text-5xl leading-tight font-bold uppercase">
-              Let&apos;s embark on an advanced tech journey!
+              Your Gateway to the Next-Gen Tech Experience!
             </h1>
 
             <Button

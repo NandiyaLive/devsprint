@@ -42,9 +42,7 @@ const Countdown = ({ className, targetDate }) => {
 
   const timerComponents = timeUnits.map((interval) => (
     <div key={interval} className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold md:text-7xl">
-        {timeLeft[interval] !== undefined ? timeLeft[interval] : 0}
-      </h1>
+      <h1 className="text-4xl font-bold md:text-7xl">{timeLeft[interval]}</h1>
       <p className="text-muted-foreground text-sm md:text-base">{interval}</p>
     </div>
   ));
