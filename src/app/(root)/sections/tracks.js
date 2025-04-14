@@ -9,6 +9,54 @@ import {
 } from "@/components/ui/tooltip";
 import { tracks } from "@/data/tracks";
 import Image from "next/image";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
+const NotesDialog = ({ track }) => (
+  <AlertDialog>
+    <AlertDialogTrigger asChild>
+      <Button variant="outline" size="lg" className="mt-4">
+        Register Now
+      </Button>
+    </AlertDialogTrigger>
+    <AlertDialogContent>
+      <AlertDialogHeader>
+        <AlertDialogTitle>Notes</AlertDialogTitle>
+        <AlertDialogDescription>
+          <ul className="my-2 list-disc space-y-2 pl-4">
+            <li>
+              We welcome enthusiastic undergraduate students from the University
+              of Vavuniya, University of Jaffna, and Rajarata University of Sri
+              Lanka to participate.
+            </li>
+            <li>
+              Please note that each delegate must register for only one track.
+            </li>
+          </ul>
+        </AlertDialogDescription>
+      </AlertDialogHeader>
+      <AlertDialogFooter>
+        <AlertDialogCancel>Cancel</AlertDialogCancel>
+        <AlertDialogAction asChild>
+          <Button asChild>
+            <a href={track.link} target="_blank" rel="noopener noreferrer">
+              Continue
+            </a>
+          </Button>
+        </AlertDialogAction>
+      </AlertDialogFooter>
+    </AlertDialogContent>
+  </AlertDialog>
+);
 
 const Tracks = () => {
   return (
@@ -23,7 +71,7 @@ const Tracks = () => {
                 <div>
                   <h2 className="mt-4 text-xl font-semibold">{track.title}</h2>
                   <p className="text-muted-foreground mt-2 text-base">
-                    {track.topic}
+                    {track.description}
                   </p>
                 </div>
 
@@ -43,15 +91,7 @@ const Tracks = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" size="lg" className="mt-4" asChild>
-                  <a
-                    href={track.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Register Now
-                  </a>
-                </Button>
+                <NotesDialog track={track} />
               </CardFooter>
             </Card>
           ))}
