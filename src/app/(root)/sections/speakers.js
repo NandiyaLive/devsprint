@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Speakers = () => {
   return (
-    <section className="mt-20 min-h-svh pt-20" id="speakers">
+    <section className="min-h-svh pt-20" id="speakers">
       <div className="container">
         <h1 className="text-5xl font-semibold">Speakers</h1>
 
@@ -16,6 +16,7 @@ const Speakers = () => {
                   {speaker.titles.map((title, i) => (
                     <p key={i}>{title}</p>
                   ))}
+                  <p>GitHub Community - Sri Lanka</p>
                 </div>
               </div>
 
@@ -30,8 +31,6 @@ const Speakers = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
       </div>
     </section>
   );
