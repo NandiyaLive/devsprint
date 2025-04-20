@@ -31,32 +31,32 @@ const NotesDialog = ({ track }) => (
     <AlertDialogContent>
       <AlertDialogHeader>
         <AlertDialogTitle className="text-left">Notes</AlertDialogTitle>
-        <AlertDialogDescription>
-          <ul className="my-2 list-disc space-y-2 pl-4 text-left">
-            <li>
-              We welcome enthusiastic undergraduate students from the{" "}
-              <strong>
-                University of Vavuniya, University of Jaffna, and Rajarata
-                University of Sri Lanka
-              </strong>{" "}
-              participate.
-            </li>
-            <li>
-              This event is <strong>open to all eligible undergraduates</strong>
-              , not just IEEE members.
-            </li>
-            <li>
-              Please note that each delegate must register for{" "}
-              <strong>only one</strong> track.
-            </li>
-            <li>
-              The ticket type <strong>corresponds to the track</strong>, and
-              delegates <strong>cannot change</strong> their selected track
-              after registration
-            </li>
-          </ul>
-        </AlertDialogDescription>
       </AlertDialogHeader>
+
+      <ul className="my-2 list-disc space-y-2 pl-4 text-left">
+        <li>
+          We welcome enthusiastic undergraduate students from the{" "}
+          <strong>
+            University of Vavuniya, University of Jaffna, and Rajarata
+            University of Sri Lanka
+          </strong>{" "}
+          participate.
+        </li>
+        <li>
+          This event is <strong>open to all eligible undergraduates</strong>,
+          not just IEEE members.
+        </li>
+        <li>
+          Please note that each delegate must register for{" "}
+          <strong>only one</strong> track.
+        </li>
+        <li>
+          The ticket type <strong>corresponds to the track</strong>, and
+          delegates <strong>cannot change</strong> their selected track after
+          registration
+        </li>
+      </ul>
+
       <AlertDialogFooter>
         <AlertDialogCancel>Cancel</AlertDialogCancel>
         <AlertDialogAction asChild>
@@ -104,7 +104,13 @@ const Tracks = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <NotesDialog track={track} />
+                {track.available ? (
+                  <NotesDialog track={track} />
+                ) : (
+                  <Button variant="outline" size="lg" className="mt-4" disabled>
+                    No Seats Available
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
