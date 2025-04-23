@@ -8,7 +8,7 @@ export const tracks = [
       "Dive into the fascinating world of Artificial Intelligence, explore how AI techniques can be leveraged to interpret, explain, and enhance AI systems — making smarter, more transparent technology.",
     link: "https://lu.ma/np9nffys",
     speakers: [speakers.lakindu, speakers.avin],
-    available: true,
+    available: false,
   },
   {
     title: "Cloud Applications",
