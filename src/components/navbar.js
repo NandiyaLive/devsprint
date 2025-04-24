@@ -1,5 +1,4 @@
-// components/BlurredNavbar.tsx
-"use client"; // Required for using hooks and client-side effects
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -32,13 +31,7 @@ export default function Navbar() {
 
         <div className="flex items-center space-x-4">
           <Button asChild>
-            <a
-              href="https://lu.ma/np9nffys"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Ticket
-            </a>
+            <Link href="/ticket">View Ticket</Link>
           </Button>
         </div>
       </div>
