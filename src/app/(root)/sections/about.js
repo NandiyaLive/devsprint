@@ -1,6 +1,7 @@
 import { speakersList } from "@/data/speakers";
 import Image from "next/image";
 import gceLogo from "@public/logos/gce.png";
+import geLogo from "@public/logos/ge.svg";
 import wso2Logo from "@public/logos/wso2.png";
 import fotsLogo from "@public/logos/fots.png";
 import vvLogo from "@public/logos/vv.png";
@@ -28,8 +29,8 @@ const About = () => {
             <p className="text-sm">Knowledge Partner</p>
 
             <Image
-              src={gceLogo}
-              alt="GCE Logo"
+              src={geLogo}
+              alt="GE Logo"
               className="mt-4 h-12 w-auto"
               width={100}
               height={100}
