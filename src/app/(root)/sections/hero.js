@@ -23,10 +23,8 @@ const Hero = () => {
         <div className="absolute h-full w-full bg-black opacity-80" />
       </div>
 
-      <div className="absolute top-0 left-0 z-50 mt-16 h-full w-full">
+      <div className="absolute top-0 left-0 z-50 h-full w-full">
         <div className="container flex h-full flex-col items-center justify-center gap-20">
-          <LogoOld />
-
           <div className="flex flex-col items-center gap-8">
             <h1 className="sm:text-7xxl text-center text-5xl leading-tight font-bold uppercase">
               Your Gateway to the Next-Gen Tech Experience!

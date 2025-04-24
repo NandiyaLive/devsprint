@@ -14,7 +14,7 @@ export const sessions = [
       "From Classroom to Cloud: Building and Deploying Applications to the Cloud",
     description: "Learn about the latest advancements in Web & Cloud",
     link: "https://lu.ma/embed/event/evt-nG3PAGXrFmRwZo7/simple",
-    speakers: [speakers.chamod, speakers.hirantha],
+    speakers: [speakers.chamod],
   },
   {
     title: "Mobile App Development",

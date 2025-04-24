@@ -1,8 +1,7 @@
-import suvinImage from "@public/speakers/Suvin.jpeg";
-import chamodImage from "@public/speakers/Chamod.jpeg";
 import avinImage from "@public/speakers/Avin.jpeg";
-import hiranthaImage from "@public/speakers/Hirantha.jpeg";
+import chamodImage from "@public/speakers/Chamod.jpeg";
 import lakinduImage from "@public/speakers/Lakindu.jpg";
+import suvinImage from "@public/speakers/Suvin.jpeg";
 
 export const speakers = {
   suvin: {
@@ -20,11 +19,6 @@ export const speakers = {
     titles: ["GitHub Campus Expert"],
     image: avinImage,
   },
-  hirantha: {
-    name: "Hirantha Pieris",
-    titles: ["Senior Engineer (Platform and Cloud) - Sysco LABS Sri Lanka"],
-    image: hiranthaImage,
-  },
   lakindu: {
     name: "Lakindu Kariyawasam",
     titles: ["Software Engineer (Intern) - WSO2"],
@@ -36,6 +30,5 @@ export const speakersList = [
   speakers.suvin,
   speakers.chamod,
   speakers.avin,
-  speakers.hirantha,
   speakers.lakindu,
 ];

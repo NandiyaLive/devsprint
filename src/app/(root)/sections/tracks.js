@@ -108,7 +108,7 @@ const Tracks = () => {
                   <NotesDialog track={track} />
                 ) : (
                   <Button variant="outline" size="lg" className="mt-4" disabled>
-                    No Seats Available
+                    Registration Closed
                   </Button>
                 )}
               </CardFooter>
