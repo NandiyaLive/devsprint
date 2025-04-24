@@ -26,7 +26,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="border-muted fixed top-4 left-1/2 z-[999] container w-full max-w-7xl -translate-x-1/2 rounded-md bg-white/10 px-8 shadow-sm backdrop-blur-md transition-all duration-300">
+    <nav className="border-muted fixed top-4 left-1/2 z-[999] container w-[calc(100%-2rem)] -translate-x-1/2 rounded-md bg-white/10 px-8 shadow-sm backdrop-blur-md transition-all duration-300">
       <div className="flex h-16 items-center justify-between">
         <LogoOld className="h-8 w-auto" />
 
